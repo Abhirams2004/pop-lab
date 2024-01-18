@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+float op1,op2,res;
+int ch;
+while(1)
+{
+printf("\n Simple Calucalator Simulation");
+printf("\n1.Addition \n2.Subtraction \n3.Multiplication\n4.Division\n5.Exit\n");
+printf("\nEnter your choice");
+scanf("%d",&ch);
+if(ch==5)
+return 0;
+printf("\nEnter two operands\n");
+scanf("%f%f",&op1,&op2);
+switch(ch)
+{
+case 1:res=op1+op2;
+printf("\nThe result of %f+%f=%f",op1,op2,res);
+break;
+case 2:res=op1-op2;
+printf("\nThe result of %f-%f=%f",op1,op2,res);
+break;
+case 3:res=op1*op2;
+printf("\nThe result of %f*%f=%f",op1,op2,res);
+break;
+case 4:if(op2==0)
+{
+printf("\n Division is not posssible");
+return 0;
+}
+res=op1/op2;
+printf("\nThe result of %f/%f=%f",op1,op2,res);
+break;
+}
+}
+}
