@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+int op1,op2,res;
+printf("\nEnter two operands\n");
+scanf("%d%d",&op1,&op2);
+res=op1+op2;
+printf("\nThe result of %d+%d=%d",op1,op2,res);
