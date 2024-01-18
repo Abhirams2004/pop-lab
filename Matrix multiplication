@@ -1,0 +1,63 @@
+#include<stdio.h>
+main()
+{
+ int A[5][5], B[5][5], C[5][5], m,n,p,q,i,j,k;
+ printf("Enter the order of matrix A");
+ scanf("%d%d", &m,&n);
+ printf("Enter the order of matrix B\n");
+ scanf("%d%d", &p,&q);
+ if(n!=p)
+ {
+ printf("Matrix multiplication is not possible");
+ Return 0;
+ }
+ else
+ {
+printf("Matrix multiplication is possible\n");
+ printf("Enter %d elements of matrix A \n", m*n);
+ for(i=0;i<m;i++)
+ for(j=0;j<n;j++)
+ scanf("%d", &A[i][j]);
+ printf("Enter %d elements of matrix B in column major order\n", p*q);
+ for(j=0;j<q;j++)
+ for(i=0;i<p;i++)
+ scanf("%d", &B[i][j]);
+ for(i=0;i<m;i++)
+ {
+ for(j=0;j<q;j++)
+ {
+ C[i][j]=0;
+ for(k=0;k<n;k++)
+ C[i][j]= C[i][j]+A[i][k]*B[k][j];
+ }
+ }
+ printf("The Matrix A is\n");
+ for(i=0;i<m;i++)
+ {
+ for(j=0;j<n;j++)
+ {
+ printf("%6d", A[i][j]);
+ }
+ printf("\n");
+ }
+ 
+
+printf("The Matrix Bis\n");
+ for(i=0;i<p;i++)
+ {
+ for(j=0;j<q;j++)
+ {
+ printf("%6d",B[i][j]);
+ }
+ printf("\n");
+ }
+ printf("The Product Matrix C is\n");
+ for(i=0;i<m;i++)
+ {
+ for(j=0;j<q;j++)
+ {
+ printf("%6d", C[i][j]);
+ }
+ printf("\n");
+ }
+}
