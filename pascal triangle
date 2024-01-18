@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+17 {
+int iNum, iSp_cnt, iNum_cnt, iVal, i, j, k;
+printf("Enter the number of rows : ");
+scanf("%d", &iNum);
+iSp_cnt=iNum-1;
+iNum_cnt = 1;
+for(i=0;i<iNum;i++)
+{
+iVal = 1;
+for(j=0;j<iSp_cnt;j++)
+{
+printf(" ");
+}
+for(k=0;k<iNum_cnt;k++)
+{
+if(k <= iNum_cnt/2)
+{
+printf("%d ", iVal);
+iVal++;
+}
+else
+{
+iVal--;
+printf("%d ", iVal-1);
+}
+}
+printf("\n");
+iSp_cnt--;
+iNum_cnt += 2;
+}
+return 0;
+}
+Principles of Programming using C Lab Sub code- BPOPS103/203
+Dept of CSE, SIET,Tumkur 8 2022-2023 
+Enterthe number ofrows: 3
+1
+ 1 2 1
+ 1 2 3 2 1
+Enterthe number ofrows: 4
+1
+ 1 2 1
+ 1 2 3 2 1
+ 1 2 3 4 3 2 1
+1Enterthe number ofrows: 5
+1
+1 2 1
+1 2 3 2 1
+1 2 3 4 3 2 1
+1 2 3 4 5 4 3 2 
