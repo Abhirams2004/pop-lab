@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int num[20],key,i ,n, low, high, mid;
+printf("Enter no. of names\n");
+scanf("%d",&n);
+printf("Enter %d Numbers in ascending order \n",n);
+for(i=0;i<n;i++)
+scanf("%d",&num[i]);
+printf("Enter the number to be searched \n");
+scanf("%d", &key);
+low=0;
+high=n-1;
+while(low<=high)
+{
+mid=(low+high)/2;
+if(key==num[mid]))
+{
+ printf("Key %d is found at the position %d\n",key,mid+1);
+ return ;
+}
+else if(key>num[mid])>0)
+low=mid+1;
+else
+high=mid-1;
+}
+printf("Number not found\n");
