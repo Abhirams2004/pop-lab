@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+ int a,b,c;
+ float root1, root2, realp, imgp, disc;
+ printf("Enter three co-efficients of the quadratic equation\n");
+ scanf("%d%d%d", &a,&b, &c);
+ if(a==0 || b==0 || c==0)
+ {
+ printf("Roots can not be found");
+ return ;
+ }
+ disc = b*b-4*a*c;
+if(disc==0)
+ {
+ printf("\nRoots are equal");
+ root1 = root2 =-b/(2.0*a);
+ printf("\nRoot1 = Root2 = %.2f", root1)
+case 1:res=op1+op2;
+printf("\nThe result of %f+%f=%f",op1,op2,res);
+break;
+case 2:res=op1-op2;
+printf("\nThe result of %f-%f=%f",op1,op2,res);
+break;
+case 3:res=op1*op2;
+printf("\nThe result of %f*%f=%f",op1,op2,res);
+break;
+case 4:if(op2==0)
+{
+printf("\n Division is not posssible");
+return 0;
+}
+res=op1/op2;
+printf("\nThe result of %f/%f=%f",op1,op2,res)
+}
